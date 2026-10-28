@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html, body, #root {
+    height: 100%;
+    background: #0A0A0A;
+    color: #FFFFFF;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    overscroll-behavior: none;
+  }
+  * { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: rgba(255,215,0,0.3); color: #fff; }
+}
+
+@layer components {
+  .gold-text {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gold-bg {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  }
+  .gold-ring {
+    box-shadow: 0 0 0 2px #0A0A0A, 0 0 0 4px #FFD700;
+  }
+  .glass {
+    background: rgba(26,26,26,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .card {
+    background: #1A1A1A;
+    border: 1px solid rgba(255,215,0,0.08);
+    border-radius: 16px;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #0A0A0A;
+    font-weight: 600;
+    border-radius: 14px;
+    transition: all .2s ease;
+  }
+  .btn-gold:hover { box-shadow: 0 0 24px rgba(255,215,0,0.45); transform: translateY(-1px); }
+  .btn-gold:active { transform: translateY(0); }
+  .btn-ghost {
+    background: rgba(255,215,0,0.06);
+    color: #FFD700;
+    border: 1px solid rgba(255,215,0,0.2);
+    border-radius: 14px;
+    transition: all .2s ease;
+  }
+  .btn-ghost:hover { background: rgba(255,215,0,0.12); }
+  .input-gold {
+    background: #121212;
+    border: 1px solid rgba(255,215,0,0.15);
+    border-radius: 12px;
+    color: #fff;
+    transition: all .2s ease;
+  }
+  .input-gold:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 0 3px rgba(255,215,0,0.15);
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,215,0,0.25); border-radius: 999px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
